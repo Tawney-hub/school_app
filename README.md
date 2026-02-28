@@ -1,6 +1,6 @@
 ### School App
 
-school app
+New app
 
 ### Installation
 

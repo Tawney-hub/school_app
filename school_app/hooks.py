@@ -1,8 +1,8 @@
 app_name = "school_app"
 app_title = "School App"
 app_publisher = "Tawney"
-app_description = "school app"
-app_email = "f@gmail.com"
+app_description = "New app"
+app_email = "t@gmail.com"
 app_license = "mit"
 
 # Apps

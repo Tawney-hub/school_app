@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:student_reg_no",
+ "creation": "2026-02-28 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "student_reg_no", "first_name", "second_name", "last_name",
+  "column_break_1", "gender", "date_of_birth", "image",
+  "academic_section", "student_class", "section",
+  "column_break_2", "house", "academic_year", "term",
+  "admission_section", "date_of_admission", "status"
+ ],
+ "fields": [
+  {"bold": 1, "fieldname": "student_reg_no", "fieldtype": "Data", "in_global_search": 1, "in_list_view": 1, "label": "Student Reg No", "reqd": 1},
+  {"fieldname": "first_name", "fieldtype": "Data", "in_list_view": 1, "label": "First Name", "reqd": 1},
+  {"fieldname": "second_name", "fieldtype": "Data", "label": "Second Name"},
+  {"fieldname": "last_name", "fieldtype": "Data", "in_list_view": 1, "label": "Last Name", "reqd": 1},
+  {"fieldname": "column_break_1", "fieldtype": "Column Break"},
+  {"fieldname": "gender", "fieldtype": "Select", "in_list_view": 1, "label": "Gender", "options": "\nMale\nFemale"},
+  {"fieldname": "date_of_birth", "fieldtype": "Date", "label": "Date of Birth"},
+  {"fieldname": "image", "fieldtype": "Attach Image", "hidden": 1, "label": "Image"},
+  {"fieldname": "academic_section", "fieldtype": "Section Break", "label": "Academic Info"},
+  {"fieldname": "student_class", "fieldtype": "Link", "in_list_view": 1, "label": "Class", "options": "Student Class", "reqd": 1},
+  {"fieldname": "section", "fieldtype": "Link", "in_list_view": 1, "label": "Section", "options": "Section", "reqd": 1},
+  {"fieldname": "column_break_2", "fieldtype": "Column Break"},
+  {"fieldname": "house", "fieldtype": "Link", "label": "House", "options": "House"},
+  {"fieldname": "academic_year", "fieldtype": "Link", "label": "Academic Year", "options": "Academic Year"},
+  {"fieldname": "term", "fieldtype": "Link", "label": "Term", "options": "Term"},
+  {"fieldname": "admission_section", "fieldtype": "Section Break", "label": "Admission"},
+  {"fieldname": "date_of_admission", "fieldtype": "Date", "in_list_view": 1, "label": "Date of Admission", "reqd": 1},
+  {"default": "Active", "fieldname": "status", "fieldtype": "Select", "in_list_view": 1, "label": "Status", "options": "Active\nInactive\nTransferred\nGraduated"}
+ ],
+ "icon": "fa fa-user",
+ "links": [],
+ "modified": "2026-02-28 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "School App",
+ "name": "Student",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1}
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "student_reg_no",
+ "track_changes": 1
+}

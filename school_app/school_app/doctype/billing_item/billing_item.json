@@ -1,0 +1,25 @@
+{
+  "actions": [],
+  "creation": "2026-02-28 12:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": ["item_code","item_name","pricelist_name","rate","qty","amount"],
+  "fields": [
+    {"fieldname": "item_code","fieldtype": "Link","label": "Item Code","options": "Item","reqd": 1,"in_list_view": 1},
+    {"fieldname": "item_name","fieldtype": "Data","label": "Item Name","fetch_from": "item_code.item_name","read_only": 1,"in_list_view": 1},
+    {"fieldname": "pricelist_name","fieldtype": "Data","label": "Price List Name","read_only": 1,"in_list_view": 1},
+    {"fieldname": "rate","fieldtype": "Currency","label": "Rate","in_list_view": 1},
+    {"fieldname": "qty","fieldtype": "Int","label": "Qty","default": "1","reqd": 1,"in_list_view": 1},
+    {"fieldname": "amount","fieldtype": "Currency","label": "Amount","read_only": 1,"in_list_view": 1}
+  ],
+  "istable": 1,
+  "links": [],
+  "modified": "2026-02-28 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "School App",
+  "name": "Billing Item",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

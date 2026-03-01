@@ -1,0 +1,61 @@
+[
+ {
+  "doctype": "Number Card",
+  "name": "Total Students",
+  "label": "Total Students",
+  "document_type": "Student",
+  "function": "Count",
+  "is_public": 1,
+  "show_percentage_stats": 1,
+  "stats_time_interval": "Monthly",
+  "color": "#4CAF50"
+ },
+ {
+  "doctype": "Number Card",
+  "name": "Active Students",
+  "label": "Active Students",
+  "document_type": "Student",
+  "function": "Count",
+  "is_public": 1,
+  "show_percentage_stats": 1,
+  "stats_time_interval": "Monthly",
+  "color": "#2196F3",
+  "filters_json": "[{\"fieldname\":\"status\",\"operator\":\"=\",\"value\":\"Active\"}]"
+ },
+ {
+  "doctype": "Number Card",
+  "name": "Total Classes",
+  "label": "Total Classes",
+  "document_type": "Student Class",
+  "function": "Count",
+  "is_public": 1,
+  "color": "#9C27B0"
+ },
+ {
+  "doctype": "Number Card",
+  "name": "Total Sections",
+  "label": "Total Sections",
+  "document_type": "Section",
+  "function": "Count",
+  "is_public": 1,
+  "color": "#FF9800"
+ },
+ {
+  "doctype": "Number Card",
+  "name": "Total Houses",
+  "label": "Total Houses",
+  "document_type": "House",
+  "function": "Count",
+  "is_public": 1,
+  "color": "#F44336"
+ },
+ {
+  "doctype": "Number Card",
+  "name": "Total Terms",
+  "label": "Total Terms",
+  "document_type": "Term",
+  "function": "Count",
+  "is_public": 1,
+  "color": "#00BCD4"
+ }
+]

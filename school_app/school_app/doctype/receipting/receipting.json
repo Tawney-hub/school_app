@@ -1,0 +1,88 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "autoname": "naming_series:",
+  "creation": "2026-02-28 12:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series","date","time","column_break_1",
+    "party_type","payment_type",
+    "payment_section",
+    "payment_mode","bank_cash_account",
+    "student_section",
+    "student_class","section","student_name","student_full_name",
+    "invoices_section","total_paid","invoices"
+  ],
+  "fields": [
+    {"fieldname": "naming_series","fieldtype": "Select","label": "Series","options": "REC-.YYYY.-"},
+    {"fieldname": "date","fieldtype": "Date","label": "Date","reqd": 1,"default": "Today","in_list_view": 1},
+    {"fieldname": "time","fieldtype": "Time","label": "Time","reqd": 1,"default": "now"},
+    {"fieldname": "column_break_1","fieldtype": "Column Break"},
+    {"fieldname": "party_type","fieldtype": "Select","label": "Party Type","options": "Customer\nSupplier","default": "Customer","reqd": 1,"in_list_view": 1},
+    {"fieldname": "payment_type","fieldtype": "Select","label": "Payment Type","options": "Receive\nPay","default": "Receive","reqd": 1,"in_list_view": 1},
+    {"fieldname": "payment_section","fieldtype": "Section Break","label": "Payment Account"},
+    {
+      "fieldname": "payment_mode",
+      "fieldtype": "Select",
+      "label": "Payment Mode",
+      "options": "Cash\nBank Transfer\nCheque\nMobile Money",
+      "default": "Cash",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "bank_cash_account",
+      "fieldtype": "Link",
+      "label": "Bank Account",
+      "options": "Account",
+      "reqd": 0,
+      "in_list_view": 0,
+      "depends_on": "eval:doc.payment_mode != 'Cash'"
+    },
+    {"fieldname": "student_section","fieldtype": "Section Break","label": "Student"},
+    {"fieldname": "student_class","fieldtype": "Link","label": "Class","options": "Student Class","in_list_view": 1},
+    {"fieldname": "section","fieldtype": "Link","label": "Section","options": "Section"},
+    {
+      "fieldname": "student_name",
+      "fieldtype": "Link",
+      "label": "Student",
+      "options": "Student",
+      "reqd": 1,
+      "hidden": 1
+    },
+    {
+      "fieldname": "student_full_name",
+      "fieldtype": "Data",
+      "label": "Student Name",
+      "reqd": 1,
+      "in_list_view": 1,
+      "read_only": 0,
+      "bold": 1
+    },
+    {"fieldname": "invoices_section","fieldtype": "Section Break","label": "Invoices"},
+    {
+      "fieldname": "total_paid",
+      "fieldtype": "Currency",
+      "label": "Total Paid",
+      "reqd": 1,
+      "bold": 1,
+      "description": "Total amount received from student"
+    },
+    {"fieldname": "invoices","fieldtype": "Table","label": "Invoices","options": "Receipting Invoice"}
+  ],
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2026-02-28 12:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "School App",
+  "name": "Receipting",
+  "owner": "Administrator",
+  "permissions": [
+    {"create": 1,"delete": 1,"email": 1,"export": 1,"print": 1,"read": 1,"report": 1,"role": "System Manager","share": 1,"submit": 1,"write": 1}
+  ],
+  "quick_entry": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}
